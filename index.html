@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Alice Moon — Political Science</title>
+<meta name="description" content="Academic website of Alice Moon, Ph.D. Candidate in Political Science.">
+
+<!-- Fonts: Libre Franklin — a clean, characterful sans-serif with academic restraint -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #1c1c1c;
+    --soft: #4a4a4a;
+    --faint: #8a8a8a;
+    --line: #e3e3e3;
+    --bg: #ffffff;
+    --accent: #2d5d7c;
+    --max: 700px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Libre Franklin', -apple-system, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--ink);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  .wrap {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  /* ---------- Header / Nav ---------- */
+  header { padding: 54px 0 0; }
+
+  nav {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    margin-bottom: 60px;
+  }
+
+  nav a {
+    color: var(--soft);
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1.5px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+  }
+
+  nav a:hover { color: var(--accent); border-color: var(--accent); }
+
+  /* ---------- Intro ---------- */
+  .intro { display: flex; gap: 36px; align-items: flex-start; margin-bottom: 26px; }
+
+  .portrait {
+    flex-shrink: 0;
+    width: 144px;
+    height: 144px;
+    border-radius: 3px;
+    object-fit: cover;
+    background: #eee;
+    border: 1px solid var(--line);
+  }
+
+  h1 {
+    font-weight: 600;
+    font-size: 33px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 7px;
+  }
+
+  .title-line {
+    font-size: 16px;
+    color: var(--soft);
+    font-weight: 400;
+  }
+
+  .contact-line {
+    margin-top: 13px;
+    font-size: 14px;
+    color: var(--faint);
+  }
+
+  .contact-line a { color: var(--accent); text-decoration: none; font-weight: 500; }
+  .contact-line a:hover { text-decoration: underline; }
+
+  /* ---------- Sections ---------- */
+  section { padding: 42px 0; border-top: 1px solid var(--line); }
+  section:first-of-type { border-top: none; padding-top: 8px; }
+
+  h2 {
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+  }
+
+  p { margin-bottom: 16px; }
+  p:last-child { margin-bottom: 0; }
+
+  a.inline { color: var(--ink); text-decoration: underline; text-decoration-color: #ccc; text-underline-offset: 2px; }
+  a.inline:hover { text-decoration-color: var(--accent); }
+
+  /* ---------- Research / item lists ---------- */
+  .item { margin-bottom: 26px; }
+  .item:last-child { margin-bottom: 0; }
+
+  .item-title {
+    font-weight: 600;
+    font-size: 17.5px;
+    margin-bottom: 3px;
+  }
+
+  .item-meta { font-size: 14px; color: var(--faint); margin-bottom: 5px; }
+  .item-desc { font-size: 15.5px; color: var(--soft); }
+
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: #eef3f6;
+    border-radius: 3px;
+    padding: 2px 7px;
+    margin-right: 7px;
+    vertical-align: 1.5px;
+  }
+
+  /* ---------- Teaching ---------- */
+  .teach-row {
+    display: flex;
+    gap: 18px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 15.5px;
+  }
+  .teach-row:last-child { border-bottom: none; }
+  .teach-year { flex-shrink: 0; width: 84px; color: var(--faint); font-size: 14px; }
+  .teach-role { color: var(--soft); }
+
+  /* ---------- Footer ---------- */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 32px 0 58px;
+    font-size: 13px;
+    color: var(--faint);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  footer a { color: var(--faint); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 560px) {
+    .intro { flex-direction: column; gap: 20px; }
+    .portrait { width: 108px; height: 108px; }
+    h1 { font-size: 28px; }
+    nav { margin-bottom: 42px; gap: 18px; }
+    header { padding-top: 36px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#cv">CV</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="intro">
+      <img class="portrait" src="Moon_portrait.jpg" alt="Alice Moon portrait">
+      <div>
+        <h1>Alice Moon</h1>
+        <div class="title-line">Ph.D. Candidate, Department of Political Science<br>The Ohio State University</div>
+        <div class="contact-line">
+          <a href="mailto:moon.519@osu.edu">moon.519@osu.edu</a> &nbsp;·&nbsp;
+          <a href="MOON_CV.pdf">CV (PDF)</a> &nbsp;·&nbsp;
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about">
+    <h2>About</h2>
+    <p>I am a Ph.D. candidate in Political Science at the Ohio State University (OSU), where I study comparative politics and methodology. My research interests are in infrastructure, water governance and politics, accountability, climate change, and development</p>
+    
+    <p>My dissertation, <a class="inline" href="#research">"[Structural Vulnerability in Low-Visibility Infrastructure: Understanding Institutional Design's influence on Sewerage Governance],"</a> investigates the governance of water and sewage infrastructure, specifically why some systems deliver clean, reliable service while others fail, and what regulation and accountability have to do with it. I'm broadly interested in studying when and why capable states fail.  I use both quantitative and qualitative methods. Before starting my Ph.D., I earned a MA in Political Science at the University of Chicago and a Master of International Studies at Seoul National Univeristy (SNU).</p>
+    <p> Outside of academia, I enjoy crocheting and baking (although none of my creations could or should be sold).</p>
+  </section>
+
+  <!-- ===================== RESEARCH ===================== -->
+  <section id="research">
+    <h2>Research</h2>
+
+    <div class="item">
+      <div class="item-title"><span class="tag">Dissertation project</span>[Structural Vulnerability in Low-Visibility Infrastructure: Understanding Institutional Design's influence on Sewerage Governance]</div>
+      <div class="item-meta">Dissertation project · in progress</div>
+      <div class="item-desc"> A comparative study of why water and sewage governance succeeds in some systems and fails in others, using England's privatized model and Scotland's public model as paired cases. The project argues that regulatory environment and accountability structures, rather than ownership form,determine system performance, combining longitudinal data analysis with comparative institutional case study.</div>
+    </div>
+
+    <div class="item">
+      <div class="item-title"><span class="tag">Working paper</span>[The Lopsided Triangle vs. the People: The Case of ProSAVANA]</div>
+      <div class="item-meta"> Triangular Cooperation and Civil Society</div>
+      <!-- <div class="item-desc">Short description</div> -->
+    </div>
+
+    <div class="item">
+      <div class="item-title"><span class="tag">Working paper </span>[Deciphering the Role of the Pivotal Party in Triangular Cooperation]</div>
+      <div class="item-meta"><em> Triangular Cooperation and International Development</div>
+      <!-- <div class="item-desc">One-line description. <a class="inline" href="#">DOI</a> · <a class="inline" href="#">PDF</a></div> -->
+    </div>
+  </section>
+
+  <!-- ===================== TEACHING ===================== -->
+  <section id="teaching">
+    <h2>Teaching</h2>
+    <p>I have taught and assisted in the following courses:</p>
+    <div class="teach-row">
+      <div class="teach-year">Autumn 2026</div>
+      <div><strong>Upcoming: Comparative Public Policy</strong><br><span class="teach-role">Instructor at OSU </span></div>
+    </div>
+    <div class="teach-row">
+      <div class="teach-year">Spring 2026</div>
+      <div><strong> Introduction to the Politics of Identity </strong><br><span class="teach-role">Teaching Assistant at OSU - instructor: Prof. Nicole Yadon </span></div>
+    </div>
+    <div class="teach-row">
+      <div class="teach-year">Autumn 2025 </div>
+      <div><strong>Introduction to Comparative Politics</strong><br><span class="teach-role">Teaching Assistant at OSU - instructor: Prof. Sarah Brooks</span></div>
+    </div>
+    <div class="teach-row">
+      <div class="teach-year"> Autumn 2024 - Spring 2025 </div>
+      <div><strong>Data Literary and Visualization</strong><br><span class="teach-role">Teaching Assistant at OSU - instructor: Prof. William Minozzi</span></div>
+    </div>
+    <div class="teach-row">
+      <div class="teach-year">Spring 2019</div>
+      <div><strong>Social and Political Theories of International Development</strong><br><span class="teach-role">Teaching Assistant at SNU - instructor: Prof. Taekyoon Kim</span></div>
+    </div>
+    <div class="teach-row">
+      <div class="teach-year">Summer 2019</div>
+      <div><strong>Workshop in International Cooperation 2</strong><br><span class="teach-role">Teaching Assistant at SNU - instructor: Prof. Taekyoon Kim</span></div>
+    </div>
+      <div class="teach-row">
+      <div class="teach-year">Autumn 2018</div>
+      <div><strong>Understanding International Development Cooperation</strong><br><span class="teach-role">Teaching Assistant at SNU - instructor: Prof. Taekyoon Kim</span></div>
+    </div>
+  </section>
+
+  <!-- ===================== CV ===================== -->
+  <section id="cv">
+    <h2>CV</h2>
+    <p>My full curriculum vitae is available here: <a class="inline" href="MOON_CV.pdf">download CV</a>.</p>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Please feel free to contact me at my email at <a class="inline" href="mailto:moon.519@osu.edu">moon.519@osu.edu</a>. My office is located in [Derby Hall, 2081], and office hours are by appointment.</p>
+    <!-- <p>You can also find me on <a class="inline" href="https://scholar.google.com">Google Scholar</a>, <a class="inline" href="#">ORCID</a>, and <a class="inline" href="#">Bluesky / X</a>.</p> -->
+  </section>
+
+  <footer>
+    <div>© 2026 Alice Moon </div>
+    <div><a href="https://alicemmoon.github.io">Link to Github</a></div>
+  </footer>
+
+</div>
+
+</body>
+</html>
